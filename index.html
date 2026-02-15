@@ -1,0 +1,363 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1671.6">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+    span.s1 {font: 12.0px 'PingFang SC'}
+    span.s2 {font: 12.0px 'Zapf Dingbats'}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!doctype html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Yang Yang Baking&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>:root{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--bg:#faf7f2;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--card:#ffffff;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--text:#1f1f1f;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--muted:#6b6b6b;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--line:#eadfce;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--accent:#c08b5c;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--shadow: 0 10px 30px rgba(0,0,0,.06);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--radius: 18px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>*{box-sizing:border-box}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>body{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin:0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:var(--bg);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color:var(--text);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>line-height:1.6;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>a{color:inherit; text-decoration:none}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.wrap{max-width:1050px;margin:0 auto;padding:26px 18px 70px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>header{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:flex;align-items:center;justify-content:space-between;gap:16px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding:10px 0 18px;border-bottom:1px solid var(--line);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position:sticky; top:0; background:rgba(250,247,242,.9); backdrop-filter: blur(10px);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>z-index:10;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.brand{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:flex;align-items:center;gap:12px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight:700; letter-spacing:.3px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.logo{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width:40px;height:40px;border-radius:14px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:linear-gradient(135deg,#f1dcc3,#d8a273);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow:var(--shadow);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>nav{display:flex;gap:16px;flex-wrap:wrap}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>nav a{font-size:14px;color:var(--muted);padding:8px 10px;border-radius:12px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>nav a:hover{background:#fff; color:#222}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hero{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding:34px 0 22px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:grid; grid-template-columns: 1.3fr .7fr; gap:18px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items:stretch;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.card{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:var(--card); border:1px solid var(--line);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius:var(--radius); box-shadow:var(--shadow);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding:22px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>h1{margin:0 0 10px;font-size:38px;line-height:1.15}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.tagline{color:var(--muted); font-size:16px;margin:0 0 18px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.chips{display:flex;gap:10px;flex-wrap:wrap}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.chip{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border:1px solid var(--line); background:#fff;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding:8px 12px;border-radius:999px;font-size:13px;color:#333;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:inline-flex;align-items:center;justify-content:center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding:10px 14px;border-radius:14px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border:1px solid var(--line); background:#fff;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight:600;font-size:14px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn.primary{background:var(--text); color:#fff; border-color:var(--text)}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn:hover{transform:translateY(-1px)}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.mini{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:grid; gap:12px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.stat{padding:14px;border-radius:16px;border:1px dashed var(--line);background:#fff}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.stat b{display:block;font-size:18px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.stat span{color:var(--muted);font-size:13px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>section{margin-top:26px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.sec-title{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:10px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.sec-title h2{margin:0;font-size:22px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.sec-title p{margin:0;color:var(--muted);font-size:14px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.grid{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:grid;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>grid-template-columns: repeat(12, 1fr);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap:14px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.tile{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>grid-column: span 4;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:#fff;border:1px solid var(--line);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius:18px; overflow:hidden; box-shadow:var(--shadow);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>cursor:pointer;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition: transform .12s ease;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.tile:hover{transform:translateY(-2px)}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.ph{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width:100%; aspect-ratio: 4/3;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:linear-gradient(135deg,#f6e8d8,#f1dcc3,#edd0b0);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:flex;align-items:center;justify-content:center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color:#7a5b3d;font-weight:700;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.tile .info{padding:12px 12px 14px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.tile .info b{display:block}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.tile .info span{color:var(--muted);font-size:13px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.list{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:grid; grid-template-columns: repeat(3,1fr); gap:14px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.item{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:#fff;border:1px solid var(--line);border-radius:18px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding:16px; box-shadow:var(--shadow);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.item b{display:block;margin-bottom:6px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.item p{margin:0;color:var(--muted);font-size:14px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>footer{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top:34px;padding-top:18px;border-top:1px solid var(--line);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color:var(--muted); font-size:13px; display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* modal */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>dialog{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border:none; border-radius:22px; padding:0; width:min(860px, 92vw);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 20px 80px rgba(0,0,0,.25);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>dialog::backdrop{background:rgba(0,0,0,.45)}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.modal{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:#fff; border-radius:22px; overflow:hidden;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.modalTop{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding:14px 16px; display:flex; justify-content:space-between; align-items:center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-bottom:1px solid var(--line);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.close{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border:1px solid var(--line); background:#fff; border-radius:14px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding:8px 10px; cursor:pointer; font-weight:700;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.modalBody{padding:16px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.modalImg{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width:100%; aspect-ratio: 16/9;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius:18px; border:1px solid var(--line);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:linear-gradient(135deg,#f6e8d8,#f1dcc3,#edd0b0);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:flex; align-items:center; justify-content:center; font-weight:700; color:#7a5b3d;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>@media (max-width: 860px){</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.hero{grid-template-columns:1fr}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.tile{grid-column: span 6}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.list{grid-template-columns:1fr}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>@media (max-width: 520px){</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.tile{grid-column: span 12}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>h1{font-size:32px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="wrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;header&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="brand"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="logo" aria-hidden="true"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div&gt;Yang Yang Baking&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div style="font-size:12px;color:var(--muted);font-weight:500;"&gt;Student Portfolio • Toronto&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;nav&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#work"&gt;Work&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#signature"&gt;Signature&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#about"&gt;About&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#contact"&gt;Contact&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/nav&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="hero"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h1&gt;Japanese-inspired breads,&lt;br/&gt;made with patience.&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="tagline"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>I’m a baking school student building a focused portfolio — simple, clean, and detail-driven.</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="chips"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="chip"&gt;Sea Salt Rolls&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="chip"&gt;Shokupan&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="chip"&gt;Sourdough&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="chip"&gt;Seasonal Specials&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="cta"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;a class="btn primary" href="#work"&gt;View work&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;a class="btn" href="https://instagram.com/" target="_blank" rel="noreferrer"&gt;Instagram&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;a class="btn" href="#contact"&gt;Contact&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="card mini"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="stat"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;b&gt;Student Portfolio&lt;/b&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Built for internships, jobs &amp; future micro-bakery.&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="stat"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;b&gt;Style&lt;/b&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Soft, minimal, Japanese-inspired aesthetics.&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="stat"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;b&gt;Location&lt;/b&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Toronto • Available for collaborations.&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="work"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="sec-title"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;Work&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Click any card to open a larger preview.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="grid" id="gallery"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Replace these placeholders with your real photos --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="tile" data-title="Sea Salt Roll" data-note="Buttery core, crisp bottom, soft layers."&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="ph"&gt;PHOTO 1&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="info"&gt;&lt;b&gt;Sea Salt Roll&lt;/b&gt;&lt;span&gt;Japanese-style • Signature&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="tile" data-title="Shokupan" data-note="Soft crumb, clean slice, balanced sweetness."&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="ph"&gt;PHOTO 2&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="info"&gt;&lt;b&gt;Shokupan&lt;/b&gt;&lt;span&gt;Milk bread • Student bake&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="tile" data-title="Sourdough Country Loaf" data-note="Natural fermentation, crisp crust, open crumb."&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="ph"&gt;PHOTO 3&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="info"&gt;&lt;b&gt;Country Loaf&lt;/b&gt;&lt;span&gt;Sourdough • Artisan&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="tile" data-title="Matcha Cream Bun" data-note="Matcha aroma, silky filling, light dough."&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="ph"&gt;PHOTO 4&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="info"&gt;&lt;b&gt;Matcha Bun&lt;/b&gt;&lt;span&gt;Seasonal • Sweet&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="tile" data-title="Croissant Practice" data-note="Laminate, proof, bake — repeating until perfect."&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="ph"&gt;PHOTO 5&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="info"&gt;&lt;b&gt;Croissant&lt;/b&gt;&lt;span&gt;Practice • Pastry&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="tile" data-title="Fruit Tart" data-note="Clean glaze, crisp shell, balanced acidity."&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="ph"&gt;PHOTO 6&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="info"&gt;&lt;b&gt;Fruit Tart&lt;/b&gt;&lt;span&gt;Pastry • Classic&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="signature"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="sec-title"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;Signature Direction&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;What I want to be known for.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="list"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;b&gt;Sea Salt Rolls&lt;/b&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Layered texture, buttery core, clean finishing — a product I want to bring to Toronto.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;b&gt;Shokupan &amp; Soft Breads&lt;/b&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Elegant softness, neat slicing, minimal sweetness — perfect for daily life.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;b&gt;Artisan Sourdough&lt;/b&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Well-controlled fermentation, beautiful scoring, and strong structure — my technical base.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="about"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="sec-title"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;About&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Short, honest, and professional.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p style="margin:0;color:var(--muted)"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>I’m currently a baking school student in Toronto, building a focused portfolio of breads and pastries.</p>
+<p class="p1"><span class="Apple-converted-space">          </span>I love Japanese-inspired aesthetics — simple, clean, and precise — and I’m documenting my learning journey</p>
+<p class="p1"><span class="Apple-converted-space">          </span>through real bakes, notes, and consistent improvement.</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="contact"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="sec-title"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;Contact&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Replace with your real info.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p style="margin:0 0 10px;color:var(--muted)"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>Instagram: &lt;a href="https://instagram.com/" target="_blank" rel="noreferrer" style="color:var(--accent);font-weight:700;"&gt;@yourhandle&lt;/a&gt;&lt;br/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>Email: &lt;a href="mailto:hello@yourmail.com" style="color:var(--accent);font-weight:700;"&gt;hello@yourmail.com&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p style="margin:0;color:var(--muted);font-size:13px"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>Tip: If you don’t want<span class="s1">公开邮箱，可以先放</span> IG DM<span class="s1">，之后再加表单。</span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;footer&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div&gt;© &lt;span id="year"&gt;&lt;/span&gt; Yang Yang Baking&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div&gt;Built with a single HTML file • Free hosting via GitHub Pages&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/footer&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;dialog id="modal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="modal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="modalTop"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;b id="mTitle"&gt;Title&lt;/b&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div id="mNote" style="color:var(--muted);font-size:13px"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="close" id="closeBtn" aria-label="Close"&gt;<span class="s2">✕</span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="modalBody"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="modalImg" id="mImg"&gt;PREVIEW&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/dialog&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById("year").textContent = new Date().getFullYear();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>const modal = document.getElementById("modal");</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const mTitle = document.getElementById("mTitle");</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const mNote = document.getElementById("mNote");</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const mImg = document.getElementById("mImg");</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const closeBtn = document.getElementById("closeBtn");</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.querySelectorAll(".tile").forEach((tile, idx) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>tile.addEventListener("click", () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>mTitle.textContent = tile.dataset.title || "Work";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>mNote.textContent = tile.dataset.note || "";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>mImg.textContent = "LARGE PREVIEW " + (idx + 1);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>modal.showModal();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>closeBtn.addEventListener("click", () =&gt; modal.close());</p>
+<p class="p1"><span class="Apple-converted-space">    </span>modal.addEventListener("click", (e) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const rect = modal.getBoundingClientRect();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const inDialog = rect.top &lt;= e.clientY &amp;&amp; e.clientY &lt;= rect.top + rect.height</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&amp;&amp; rect.left &lt;= e.clientX &amp;&amp; e.clientX &lt;= rect.left + rect.width;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (!inDialog) modal.close();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
